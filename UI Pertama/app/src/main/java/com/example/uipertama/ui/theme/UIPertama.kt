@@ -2,6 +2,7 @@ package com.example.uipertama.ui.theme
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
@@ -18,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -63,32 +66,36 @@ fun Activitaspertama(modifier: Modifier = Modifier) {
                         .size(100.dp)
                         .padding(5.dp)
                 )
-                space(modifier= modifier.width(38.dp))
-                column() {
-                    text(
-                        stringResource(R.string.nama),
+                Spacer(modifier = Modifier.width(38.dp))
+                Column {
+                    Text(
+                        text = stringResource(R.string.nama),
                         fontSize = 20.sp,
-                        fontFamily =fontFamily.Cursive,
-                        color = Color.White
-                        modifier = Modifier.padding(5.dp)
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(bottom = 5.dp) // Memberi jarak bawah
                     )
-                    text(
-                        stringResource(R.string.alamat),
+                    Text(
+                        text = stringResource(R.string.alamat),
                         fontSize = 20.sp,
-                        fontFamily =fontFamily.Cursive,
-                        color = Color.White
-                        modifier = Modifier.padding(5.dp)
-
-
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 5.dp) // Memberi jarak atas
                     )
                 }
-                box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(5.dp),
-                    contentAlignment = Alignment.BottomEnd
+            }
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(5.dp),
+                contentAlignment = Alignment.BottomEnd
+                text = stringResource(R.string.copy),
+                fontSize = 20.sp,
+                fontFamily = FontFamily.Cursive,
+                color = Color.Black,
+                modifier = Modifier.padding(5.dp)
+            ) {
 
-                )
             }
         }
     }
