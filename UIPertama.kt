@@ -101,4 +101,14 @@ fun Activitaspertama(modifier: Modifier = Modifier) {
     }
 }
 
+// Card Kedua (Biru)
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 12.dp, vertical = 6.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color(0xFF0000FF) // Warna Biru
+            )
+        ) {
+
 
