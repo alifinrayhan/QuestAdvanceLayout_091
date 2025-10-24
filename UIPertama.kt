@@ -169,6 +169,53 @@ fun Activitaspertama(modifier: Modifier = Modifier) {
                 containerColor = Color(0xFF008000) // Warna Hijau
             )
         ) {
+             Row {
+                val gambar = painterResource(R.drawable.logo_umy)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier // DIUBAH
+                        .size(100.dp)
+                        .padding(5.dp)
+                )
+                Spacer(modifier = Modifier.width(30.dp)) // DIUBAH
+                Column {
+                    Text(
+                        text = stringResource(R.string.isi_nama2),
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    Text(
+                        text = stringResource(R.string.isi_nohp2),
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                    Text(
+                        text = stringResource(R.string.isi_alamat2),
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 5.dp)
+                    )
+                }
+            }
+        }
+
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+        ) {
+            Text(
+                text = stringResource(R.string.copy),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 16.dp) // Sedikit penyesuaian padding
+            )
+        }
+    }
+}
 
 
 
