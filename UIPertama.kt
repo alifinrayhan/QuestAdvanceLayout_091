@@ -135,7 +135,7 @@ fun Activitaspertama(modifier: Modifier = Modifier) {
                         color = Color.White,
                         modifier = Modifier.padding(top = 10.dp)
                     )
- Row {
+                    Row {
                 val gambar = painterResource(R.drawable.logo_umy)
                 Image(
                     painter = gambar,
@@ -159,7 +159,16 @@ fun Activitaspertama(modifier: Modifier = Modifier) {
                         color = Color.White,
                         modifier = Modifier.padding(top = 10.dp)
                     )
-
+                    
+// Card Ketiga (Hijau)
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 12.dp, vertical = 6.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color(0xFF008000) // Warna Hijau
+            )
+        ) {
 
 
 
