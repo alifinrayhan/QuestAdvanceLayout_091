@@ -108,7 +108,32 @@ fun Activitaspertama(modifier: Modifier = Modifier) {
                 .padding(horizontal = 12.dp, vertical = 6.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color(0xFF0000FF) // Warna Biru
+                
             )
         ) {
+             Row {
+                val gambar = painterResource(R.drawable.logo_umy)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier // DIUBAH
+                        .size(100.dp)
+                        .padding(5.dp)
+                )
+                Spacer(modifier = Modifier.width(30.dp)) // DIUBAH
+                Column {
+                    Text(
+                        text = stringResource(R.string.isi_nama),
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    Text(
+                        text = stringResource(R.string.isi_nohp),
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
 
 
